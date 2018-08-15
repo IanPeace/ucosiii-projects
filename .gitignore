@@ -1,0 +1,4 @@
+!.gitignore
+
+Examples/Freescale/FRDM-KL25Z/OS3/KeilMDK/Listings/*
+Examples/Freescale/FRDM-KL25Z/OS3/KeilMDK/Objects/*
