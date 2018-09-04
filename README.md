@@ -21,3 +21,11 @@ Supportted Boards
 
     - [FRDM-KL25Z](https://www.nxp.com/support/developer-resources/evaluation-and-development-boards/freedom-development-boards/mcu-boards/freedom-development-platform-for-kinetis-kl14-kl15-kl24-kl25-mcus:FRDM-KL25Z?)
     - [FRDM-KE02Z](https://www.nxp.com/products/processors-and-microcontrollers/arm-based-processors-and-mcus/kinetis-cortex-m-mcus/e-series5v-robustm0-plus-m4/kinetis-e-series-freedom-development-platform:FRDM-KE02Z)
+
+#### Cortex-M4
+
+  - Atmel/Microchip
+
+    - [SAM4N Xplained Pro Evaluation Kit](http://www.microchip.com/developmenttools/ProductDetails/PartNo/ATSAM4N-XPRO)
+	- [OLED1 Xplained Pro Extension Kit](http://www.microchip.com/developmenttools/ProductDetails/PartNo/ATOLED1-XPRO)
+	- [I/O1 Xplained Pro Extension Kit](http://www.microchip.com/developmenttools/ProductDetails/PartNo/ATIO1-XPRO)

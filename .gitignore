@@ -3,6 +3,11 @@
 Examples/Freescale/FRDM-KL25Z/OS3/KeilMDK/Listings/*
 Examples/Freescale/FRDM-KL25Z/OS3/KeilMDK/Objects/*
 Examples/Freescale/FRDM-KL25Z/OS3/KeilMDK/*.uvguix.*
+
 Examples/Freescale/FRDM-KE02Z/OS3/KeilMDK/Listings/*
 Examples/Freescale/FRDM-KE02Z/OS3/KeilMDK/Objects/*
 Examples/Freescale/FRDM-KE02Z/OS3/KeilMDK/*.uvguix.*
+
+Examples/Atmel/ATSAM4N-XPro/OS3/KeilMDK/Listings/*
+Examples/Atmel/ATSAM4N-XPro/OS3/KeilMDK/Objects/*
+Examples/Atmel/ATSAM4N-XPro/OS3/KeilMDK/*.uvguix.*
