@@ -77,7 +77,9 @@ static OS_TMR   App_LED1Tmr;
 static OS_TMR   App_LED2Tmr;
 static OS_TMR   App_LED3Tmr;
 static OS_TMR   App_LED4Tmr;
+#if (APP_CFG_GUI_EN == DEF_ENABLED)
 static OS_TMR   App_uGUIRFTmr;
+#endif  /* (APP_CFG_GUI_EN == DEF_ENABLED) */
 
 OS_FLAG_GRP APP_KeyFlagGrp;
 
@@ -93,7 +95,9 @@ static  void  App_TaskCreate      (void);
 static  void  App_TaskStart       (void *p_arg);
 static  void  App_Task            (void *p_arg);
 static  void  App_LEDTmrCallback  (void *p_tmr_os, void *p_arg);
+#if (APP_CFG_GUI_EN == DEF_ENABLED)
 static  void  App_uGUIRFTmrCallback (void *p_tmr_os, void *p_arg);
+#endif  /* (APP_CFG_GUI_EN == DEF_ENABLED) */
 
 /*
 *********************************************************************************************************
@@ -193,8 +197,10 @@ static  void  App_TaskStart (void *p_arg)
     CPU_IntDisMeasMaxCurReset();
 #endif
 
+#if (APP_CFG_GUI_EN == DEF_ENABLED)
     BSP_SSD1306_uGUI_Init();
     UG_FillScreen(0);
+#endif  /* (APP_CFG_GUI_EN == DEF_ENABLED) */
 
     APP_TRACE_INFO(("Creating Application Events...\n\r"));
     App_ObjCreate();                                            /* Create Applicaton kernel objects.                    */
@@ -252,7 +258,7 @@ static  void  App_ObjCreate (void)
                 0, APP_uGUI_RF_TMR_TICK, OS_OPT_TMR_PERIODIC,
                 App_uGUIRFTmrCallback, (void *)NULL, &os_err);
     OSTmrStart(&App_uGUIRFTmr, &os_err);
-#endif
+#endif  /* (APP_CFG_GUI_EN == DEF_ENABLED) */
 }
 
 
@@ -363,6 +369,7 @@ static  void  App_Task (void *p_arg)
                 case BUTTON1_PRES_SHORT_FLAG:
                     key_name = "BUTTON 1";
                     OSTmrStart(&App_LED1Tmr, &os_err);
+#if (APP_CFG_GUI_EN == DEF_ENABLED)
                     UG_FillScreen(0);
                     UG_FontSelect(&FONT_6X10);
                     UG_PutString(2, 16, "hello");
@@ -371,6 +378,7 @@ static  void  App_Task (void *p_arg)
                     UG_FontSelect(&FONT_16X26);
                     UG_PutString(52, 3, "GUI");
                     UG_FillCircle(112, 15, 10, 1);
+#endif  /* (APP_CFG_GUI_EN == DEF_ENABLED) */
                     break;
                 case BUTTON1_PRES_LONG_FLAG:
                     key_name = "BUTTON 1 long";
@@ -380,11 +388,13 @@ static  void  App_Task (void *p_arg)
                 case BUTTON2_PRES_SHORT_FLAG:
                     key_name = "BUTTON 2";
                     OSTmrStart(&App_LED2Tmr, &os_err);
+#if (APP_CFG_GUI_EN == DEF_ENABLED)
                     UG_FillScreen(0);
                     UG_DrawMesh(0, 0, 63, 15, 0);
                     UG_DrawMesh(64, 0, 127, 15, 1);
                     UG_DrawMesh(64, 16, 127, 31, 0);
                     UG_DrawMesh(0, 16, 63, 31, 1);
+#endif  /* (APP_CFG_GUI_EN == DEF_ENABLED) */
                     break;
                 case BUTTON2_PRES_LONG_FLAG:
                     key_name = "BUTTON 2 long";
@@ -394,7 +404,9 @@ static  void  App_Task (void *p_arg)
                 case BUTTON3_PRES_SHORT_FLAG:
                     key_name = "BUTTON 3";
                     OSTmrStart(&App_LED3Tmr, &os_err);
+#if (APP_CFG_GUI_EN == DEF_ENABLED)
                     UG_FillScreen(1);
+#endif  /* (APP_CFG_GUI_EN == DEF_ENABLED) */
                     break;
                 case BUTTON3_PRES_LONG_FLAG:
                     key_name = "BUTTON 3 long";
@@ -414,8 +426,10 @@ static void App_LEDTmrCallback (void *p_tmr_os, void *p_arg)
     BSP_LED_Toggle((CPU_INT32U)p_arg);
 }
 
+#if (APP_CFG_GUI_EN == DEF_ENABLED)
 static void App_uGUIRFTmrCallback (void *p_tmr_os, void *p_arg)
 {
     ssd1306_update();
 }
+#endif  /* (APP_CFG_GUI_EN == DEF_ENABLED) */
 

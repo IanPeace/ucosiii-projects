@@ -54,7 +54,7 @@
 
 #define  APP_CFG_SHELL_EN                           DEF_ENABLED
 #define  APP_CFG_PRINTF_EN                          DEF_ENABLED
-#define  APP_CFG_GUI_EN                             DEF_ENABLED
+#define  APP_CFG_GUI_EN                             DEF_DISABLED
 
 /*
 *********************************************************************************************************

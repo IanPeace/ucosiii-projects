@@ -26,6 +26,4 @@ Supportted Boards
 
   - Atmel/Microchip
 
-    - [SAM4N Xplained Pro Evaluation Kit](http://www.microchip.com/developmenttools/ProductDetails/PartNo/ATSAM4N-XPRO)
-	- [OLED1 Xplained Pro Extension Kit](http://www.microchip.com/developmenttools/ProductDetails/PartNo/ATOLED1-XPRO)
-	- [I/O1 Xplained Pro Extension Kit](http://www.microchip.com/developmenttools/ProductDetails/PartNo/ATIO1-XPRO)
+    - [SAM4N Xplained Pro Starter Kit](http://www.microchip.com/DevelopmentTools/ProductDetails/ATSAM4N-XSTK)
